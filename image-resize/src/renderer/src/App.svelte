@@ -1,8 +1,6 @@
 <script>
   import Versions from './components/Versions.svelte'
   import electronLogo from './assets/electron.svg'
-
-  const ipcHandle = () => window.electron.ipcRenderer.send('ping')
 </script>
 
 <img alt="logo" class="logo" src={electronLogo} />
@@ -17,8 +15,6 @@
     <a href="https://electron-vite.org/" target="_blank" rel="noreferrer">Documentation</a>
   </div>
   <div class="action">
-    <!-- svelte-ignore a11y-click-events-have-key-events a11y-no-static-element-interactions a11y-missing-attribute-->
-    <a target="_blank" rel="noreferrer" on:click={ipcHandle}>Send IPC</a>
   </div>
 </div>
 <Versions />
